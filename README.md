@@ -22,7 +22,7 @@ Login to the Azure Container Registry:
 
 Publish the docker image to the Azure Container Registry that was created by Terraform using the following command
 
-```
+```bash
 docker tag azurenamingtool:latest <the_name_of_your_acr>.azurecr.io/tools/azurenamingtool
 docker push <the_name_of_your_acr>.azurecr.io/tools/azurenamingtool
 ```
