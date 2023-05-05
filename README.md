@@ -21,7 +21,7 @@ The above variables are used for the deployment of the Azure resources that will
 Deploy the Azure infrastructure using the typical Terraform flow `init/plan/apply`.
 Keep a note of the hostname, you will use it later to access the application
 
-----add screenshot---
+![image](https://user-images.githubusercontent.com/43405869/236496978-adfa28b9-505f-40b7-8b53-6bb2d2779710.png)
 
 Download/clone the [CloudAdoptionFramework](https://github.com/microsoft/CloudAdoptionFramework) repo on your machine.
 
