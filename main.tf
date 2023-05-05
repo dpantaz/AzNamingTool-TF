@@ -100,3 +100,7 @@ resource "azurerm_linux_web_app" "web_app" {
   depends_on = [azurerm_role_assignment.role_assignment]
 }
 
+output "hostname" {
+  value = azurerm_linux_web_app.web_app.default_hostname
+}
+
