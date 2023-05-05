@@ -4,7 +4,7 @@ This repo can help you quickly deploy the Azure Naming Tool on an Azure Web App 
 
 ## Instructions
 
-Download the repo files, create a new `terraform.tfvars` file under the root directory of the repo and paste the following lines
+Download the repo files, create a new `terraform.tfvars` file under the root directory of the repo and paste the following lines:
 
 ```text
 app_service_name      = ""
@@ -16,9 +16,12 @@ acr_name              = ""
 managed_identity_name = ""
 ```
 
-The above variables are used for the dpeloyment of the Azure resources that will host the Azure Naming tool web application. Make sure that you provide your own values to these variables.
+The above variables are used for the deployment of the Azure resources that will host the Azure Naming tool web application. Make sure that you provide your own values to these variables.
 
 Deploy the Azure infrastructure using the typical Terraform flow `init/plan/apply`.
+Keep a note of the hostname, you will use it later to access the application
+
+----add screenshot---
 
 Download/clone the [CloudAdoptionFramework](https://github.com/microsoft/CloudAdoptionFramework) repo on your machine.
 
@@ -40,3 +43,5 @@ Publish the docker image to the Azure Container Registry that was created by Ter
 docker tag azurenamingtool:latest <the_name_of_your_acr>.azurecr.io/tools/azurenamingtool
 docker push <the_name_of_your_acr>.azurecr.io/tools/azurenamingtool
 ```
+
+Your app should be available in a couple of minutes at the hostname that you recorded earlier.
