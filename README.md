@@ -18,7 +18,18 @@ managed_identity_name = ""
 
 The above variables are used for the deployment of the Azure resources that will host the Azure Naming tool web application. Make sure that you provide your own values to these variables.
 
-Deploy the Azure infrastructure using the typical Terraform flow `init/plan/apply`.
+Login to your Azure subscription using Azure CLI.
+
+`az login`
+
+Deploy the Azure infrastructure using the typical Terraform flow.
+
+```bash
+terraform init
+terraform plan
+terraform apply
+```
+
 Keep a note of the hostname, you will use it later to access the application
 
 ![image](https://user-images.githubusercontent.com/43405869/236496978-adfa28b9-505f-40b7-8b53-6bb2d2779710.png)
@@ -33,7 +44,7 @@ Run the following command to build the docker image:
 
 `docker build -t azurenamingtool .`
 
-Login to the Azure Container Registry (provide the name of the Azure Container Registry as specified in the terraform.tfvars file):
+Login to the Azure Container Registry (provide the name of the Azure Container Registry as specified in the terraform.tfvars file (acr_name variable) ):
 
 `az acr login -n <the_name_of_your_acr>`
 
